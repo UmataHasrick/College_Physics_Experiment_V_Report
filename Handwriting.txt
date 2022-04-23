@@ -1,0 +1,60 @@
+Sub Handwriting()
+'
+' Handwriting 瀹?
+'
+'
+Dim R_Character As Range
+
+
+    Dim FontSize(5)
+    ' 字体大小在5个值之间进行波动，可以改写
+    FontSize(1) = "20"
+    FontSize(2) = "19"
+    FontSize(3) = "18"
+    FontSize(4) = "20"
+    FontSize(5) = "22"
+
+
+
+    Dim FontName(1)
+    '字体名称在三种字体之间进行波动，可改写，但需要保证系统拥有下列字体
+    FontName(1) = "钟齐余好建行艺体"
+
+    Dim ParagraphSpace(5)
+    '行间距 在一定以下值中均等分布，可改写
+    ParagraphSpace(1) = "22"
+    ParagraphSpace(2) = "23"
+    ParagraphSpace(3) = "19"
+    ParagraphSpace(4) = "21"
+    ParagraphSpace(5) = "19.5"
+
+    '不懂原理的话，不建议修改下列代码
+
+    For Each R_Character In ActiveDocument.Characters
+
+        VBA.Randomize
+
+
+        R_Character.Font.Size = FontSize(Int(VBA.Rnd * 5) + 1)
+
+        R_Character.Font.Position = Int(VBA.Rnd * 3) + 1
+
+        R_Character.Font.Spacing = 0
+
+
+    Next
+
+    Application.ScreenUpdating = True
+
+
+
+    For Each Cur_Paragraph In ActiveDocument.Paragraphs
+
+        Cur_Paragraph.LineSpacing = ParagraphSpace(Int(VBA.Rnd * 5) + 1)
+
+
+    Next
+        Application.ScreenUpdating = True
+
+
+End Sub
