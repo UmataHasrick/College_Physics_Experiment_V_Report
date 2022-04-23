@@ -1,0 +1,12 @@
+#For latex
+*.synctex(busy)
+*.aux
+*.bbl
+*.blg
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.out
+*.ppt
+五级
