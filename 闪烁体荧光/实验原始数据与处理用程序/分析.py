@@ -6,7 +6,7 @@ from scipy import optimize
 
 #-------------------------------------definition of functions and working path-------------------------------------#
 
-working_path = "D:\DeskTop\学习用\\2022春季学期\大物实验四级报告\闪烁体荧光\\20220413\\"
+working_path = "D:\DeskTop\学习用\\2022春季学期\大物实验五级报告\闪烁体荧光\\20220413\\"
 file_list = ["NaI","CeF3","BGO","BaF2","塑料","有机玻璃"]
 data_index = range(1,11)
 
