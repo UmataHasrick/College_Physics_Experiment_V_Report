@@ -9,6 +9,7 @@
 *.fdb_latexmk
 *.out
 
+~$*
 *.ppt
 五级
 EXP5_report_Raman.pdf
